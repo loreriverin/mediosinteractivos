@@ -1,4 +1,3 @@
-var florimg;
 
 var botontam = 40;
 
@@ -91,11 +90,6 @@ var herramienta = 0;
 //el color predeterminado es el naranja
 var colordibujar = 8;
 
-function preload() {
-  //fotico de la flor, ya que si se hace directamente se altera el resto del 
-  //programa por la translación
-  florimg = loadImage("flor.JPG");
-}
 
 function setup() {
 	//  windowWidth y windowHeight son el tamaño del programa(tamaño en que el
@@ -293,11 +287,16 @@ function draw() {
   point(boton21x+(botontam/2),boton21y+(botontam/2)-15);
   noStroke();
 
-  //herramienta8(dibuja flores)
+  //herramienta8(dibuja flores)(no está dibujada la misma flor
+  //porque causaba errores en el codigo. es una flor parecida a la
+  //que se dibuja en el espacio de dibujo
   fill(255,255,255);
   rect(boton22x,boton22y,botontam,botontam);
-  image(florimg,boton22x,boton22y,botontam,botontam);  
-  
+  stroke(0);
+  strokeWeight(1);
+  ellipse(boton22x+15,boton22y+20,15,10);
+   ellipse(boton22x+25,boton22y+20,15,10);
+  ellipse(boton22x+(botontam/2),boton22y+20,10,30);
   //herramienta9(dibuja circulos conc{entricos)
   fill(255,255,255);
   rect(boton23x,boton23y,botontam,botontam);
@@ -626,3 +625,5 @@ function draw() {
     }
 	}
 }
+
+     
