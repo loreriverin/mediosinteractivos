@@ -75,11 +75,10 @@ function draw() {
 function touchStarted() {
   if (estado == INTRO) {
     estado = INSTRUCCIONES;
-  }
-  if (estado == INSTRUCCIONES) {
+  } else if (estado == INSTRUCCIONES) {
     estado = JUEGO;
   }
-  if (estado == JUEGO) {
+  else if (estado == JUEGO) {
     dirX = -1 * dirX
     return false;
   }
