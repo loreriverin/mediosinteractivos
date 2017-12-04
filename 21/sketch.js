@@ -182,7 +182,7 @@ function draw() {
     
      if( contadoraguacates>=15 ||contadormonedas>=50)
      {
-       esdato=GANASTE;
+       estado=GANASTE;
      }
     image(miImagen2, 0, 0, width, height);
     
