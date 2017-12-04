@@ -1,5 +1,5 @@
-var Hombrecito1;
-var Hombrecito2;
+var hombrecitoder1;
+var hombrecitoizq1;
 
 var posx = 0;
 var posy = 0;
@@ -12,12 +12,15 @@ var estado = 0;
 var INTRO = 1;
 var JUEGO = 2;
 
+var cambiohombrecito = false;
+
+
 function preload() {
 
   miImagen1 = loadImage("Inicio-05.png ");
   miImagen2 = loadImage("fondojuego-04.png");
-  Hombrecito1 = loadImage("hombrecito.png");
-  Hombrecito2 = loadImage("hombrecitoizq.png");
+  hombrecitoder1 = loadImage("hombrecitoder1.png");
+  hombrecitoizq1 = loadImage("hombrecitoizq1.png");
 
 
 }
@@ -26,11 +29,21 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   estado = INTRO;
     posx = 1;
-    posy = (height-(height/3.4));
+    posy = (height-(height/4.3));
+  
+    if(width>height)
+  {
+    tamy=map(30,0,400,0,height);
+    tamx=tamy*(262/172);
+  }
+  else
+  {
+    tamx=map(20,0,400,0,width);
+    tamy=tamx*(262/172);
+  }
 }
 
 function draw() {
-  background(220);
 
   if (estado == INTRO) {
     image(miImagen1, 0, 0, width, height);
@@ -40,18 +53,19 @@ function draw() {
     if (posx >= (width - (width / 10)) || posx <= 0) {
       dirX = -1 * dirX;
     }
-    posx = posx + (2 * dirX);
+    posx = posx + (4 * dirX);
 
-    if (dirX == 1) {
-      image(Hombrecito1, posx, posy, width / 10, height / 7);
-    } else {
-      image(Hombrecito2, posx, posy, width / 10, height / 7);
+    if (dirX == 1) 
+    {
+           image(hombrecitoder1, posx, posy, tamx,tamy);  
+    } 
+    else
+    {
+           image(hombrecitoizq1, posx, posy,tamx,tamy);
+  
     }
 
   }
-
-
-
 
 
 }
