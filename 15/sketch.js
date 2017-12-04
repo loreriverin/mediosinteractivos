@@ -50,7 +50,7 @@ function draw() {
   } else if (estado == JUEGO) {
     image(miImagen2, 0, 0, width, height);
 
-    if (posx >= (width - (width / 10)) || posx <= 0) {
+    if (posx >= (width -  tamx) || posx <= 0) {
       dirX = -1 * dirX;
     }
     posx = posx + (4 * dirX);
