@@ -156,7 +156,7 @@ function draw() {
     cosascayendo[i].dibujarse();
     cosascayendo[i].moverse();
 
-    if (cosascayendo[i].y > posy+10) {
+    if (cosascayendo[i].y > height-20) {
     var quecosa = floor(random(0, 7));
     if (quecosa == 0 || quecosa == 1 || quecosa == 2) {
       cosascayendo[i] = new fueguito();
