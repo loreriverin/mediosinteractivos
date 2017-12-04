@@ -279,7 +279,7 @@ function draw() {
     textSize(50);
     fill(255);
     text("AGUACATES:", (width/2), posy+(height/5));
-    text(contadoraguacates, (width-200), posy+(height/5));
+    text(contadoraguacates, (width-100), posy+(height/5));
     noFill();
     
      if(contadorvidas==3)
