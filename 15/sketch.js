@@ -48,7 +48,7 @@ function draw() {
   if (estado == INTRO) {
     image(miImagen1, 0, 0, width, height);
     
-  }  else if (estado == JUEGO)
+  }  else if (estado == INSTRUCCIONES)
   {
      image(instrucimagen, 0, 0, width, height);
     
@@ -75,7 +75,8 @@ function draw() {
 function touchStarted() {
   if (estado == INTRO) {
     estado = INSTRUCCIONES;
-  } else if (estado == INSTRUCCIONES) {
+  }
+  else if (estado == INSTRUCCIONES) {
     estado = JUEGO;
   }
   else if (estado == JUEGO) {
