@@ -424,6 +424,10 @@ function touchStarted() {
   }
   else if (estado == JUEGO) {
     dirX = -1 * dirX
-    return false;
   }
+  else if (estado == PERDISTE) {
+   estado=INSTRUCCIONES;
+     return false;
+  }
+    
 }
