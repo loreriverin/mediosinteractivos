@@ -119,6 +119,5 @@ function draw(){
   point(391+contadorJ,512);
   line(391, 512, 391+ (contadorJ-10), 512);
   
-  saveCanvas('LogoLRR' + frameCount, .png);
   
 }
