@@ -118,6 +118,4 @@ function draw(){
   stroke(247, 148,29);
   point(391+contadorJ,512);
   line(391, 512, 391+ (contadorJ-10), 512);
-  
-  
-}
+  }
